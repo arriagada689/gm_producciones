@@ -1,0 +1,6 @@
+- deploy initial project
+- display gif
+- add navbar
+	- services
+	- 
+- add hero
