@@ -3,6 +3,7 @@ import headerVideo from '../assets/header-video.mp4'
 import headerVideo2 from '../assets/horizontal.mp4'
 import navbarLogo from '../assets/logo-bg-black.png'
 import navbarLogo2 from '../assets/logo-red.png'
+import videoPoster from '../assets/video-poster.png'
 
 const Top = () => {
     const [index, setIndex] = useState(0)
@@ -23,8 +24,11 @@ const Top = () => {
     }, [])
     
     return (
-        <header className='relative h-[75vh] w-full'>
-            <video src={headerVideo2} autoPlay loop muted className='hidden md:block h-full w-full object-fill' id="video_ID"/>
+        <header className='relative h-[78vh] w-full'>
+            {/*Overlay */}
+            <div className='absolute top-0 left-0 w-full h-full bg-videoOverlay'></div>
+
+            <video src={headerVideo2} autoPlay loop muted poster={videoPoster} className='hidden md:block h-full w-full object-fill' id="video_ID"/>
 
             <video src={headerVideo} autoPlay playsInline loop muted className='md:hidden h-full w-full object-fill' id="videoID"/>
             
