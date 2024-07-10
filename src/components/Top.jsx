@@ -24,9 +24,9 @@ const Top = () => {
     
     return (
         <header className='relative h-[75vh] w-full'>
-            <video src={headerVideo2} autoPlay loop muted className='hidden md:block h-full w-full object-fill'/>
+            <video src={headerVideo2} autoPlay loop muted className='hidden md:block h-full w-full object-fill' id="video_ID"/>
 
-            <video src={headerVideo} autoPlay playsinline loop muted className='md:hidden h-full w-full object-fill' id="videoID"/>
+            <video src={headerVideo} autoPlay playsInline loop muted className='md:hidden h-full w-full object-fill' id="videoID"/>
             
             {/*Navbar for desktop */}
             <nav className='hidden md:block absolute top-0 left-0 p-4 w-full'>
@@ -56,7 +56,7 @@ const Top = () => {
             <div className='absolute inset-0 flex items-center justify-center'>
                 <div className='text-center text-white'>
                     <div className='text-7xl font-semibold'>Titulo</div>
-                    <div className={`text-center text-white transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+                    <div className={`text-center text-white transition-opacity duration-500 opacity-100`}>
                         <div className='text-3xl font-semibold'>{subtitles[index]}</div>
                     </div>
                 </div>
