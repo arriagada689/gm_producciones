@@ -8,18 +8,18 @@ const Top = () => {
     const [index, setIndex] = useState(0)
     const [fade, setFade] = useState(true);
 
-    const subtitles = ['Subtitulo 1', 'Subtitulo 2', 'Subtitulo 3']
+    const subtitles = ['Subtitulo', 'Subtitulo 2', 'Subtitulo 3']
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setFade(false);
-            setTimeout(() => {
-                setIndex((prevIndex) => (prevIndex + 1) % subtitles.length);
-                setFade(true);
-            }, 500); // Duration of the fade-out transition
-        }, 2800);
+        // const interval = setInterval(() => {
+        //     setFade(false);
+        //     setTimeout(() => {
+        //         setIndex((prevIndex) => (prevIndex + 1) % subtitles.length);
+        //         setFade(true);
+        //     }, 500); 
+        // }, 2800);
 
-        return () => clearInterval(interval);
+        // return () => clearInterval(interval);
     }, [])
     
     return (
@@ -56,7 +56,7 @@ const Top = () => {
             <div className='absolute inset-0 flex items-center justify-center'>
                 <div className='text-center text-white'>
                     <div className='text-7xl font-semibold'>Titulo</div>
-                    <div className={`text-center text-white transition-opacity duration-500 opacity-100`}>
+                    <div className={`text-center text-white`}>
                         <div className='text-3xl font-semibold'>{subtitles[index]}</div>
                     </div>
                 </div>
