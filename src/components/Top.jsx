@@ -26,7 +26,7 @@ const Top = () => {
         <header className='relative h-[75vh] w-full'>
             <video src={headerVideo2} autoPlay loop muted className='hidden md:block h-full w-full object-fill'/>
 
-            <video src={headerVideo} autoPlay loop muted className='md:hidden h-full w-full object-fill'/>
+            <video src={headerVideo} autoPlay playsinline loop muted className='md:hidden h-full w-full object-fill' id="videoID"/>
             
             {/*Navbar for desktop */}
             <nav className='hidden md:block absolute top-0 left-0 p-4 w-full'>
